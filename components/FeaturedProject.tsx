@@ -3,10 +3,13 @@ import Link from "next/link";
 
 export default function FeaturedProject() {
   return (
-    <section id="work" className="bg-neutral-950 px-6 py-24 text-white lg:px-8">
+    <section
+      id="work"
+      className="bg-gradient-to-br from-[#081b2d] via-[#0d2641] to-[#123d63] px-6 py-24 text-white lg:px-8"
+    >
       <div className="mx-auto max-w-7xl">
         <div className="mb-12">
-          <p className="text-sm font-medium uppercase tracking-[0.2em] text-neutral-400">
+          <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#abd5ff]">
             Featured Project
           </p>
 
@@ -16,9 +19,9 @@ export default function FeaturedProject() {
         </div>
 
         <div className="grid gap-12 lg:grid-cols-[1.5fr_1fr] lg:items-center">
-          <div className="overflow-hidden rounded-2xl bg-neutral-900">
+          <div className="overflow-hidden rounded-2xl border border-white/10 bg-[#0a2238] shadow-[0_30px_60px_rgba(2,17,29,0.45)]">
             <Image
-              src="/projects/law-firm.jpg"
+              src="/mainlaw.png"
               alt="Law firm website project"
               width={1400}
               height={900}
@@ -27,7 +30,7 @@ export default function FeaturedProject() {
           </div>
 
           <div>
-            <p className="text-lg leading-8 text-neutral-300">
+            <p className="text-lg leading-8 text-slate-200">
               A professional website concept designed for a modern legal
               practice, with an emphasis on credibility, clear communication and
               easy access to legal services.
@@ -37,7 +40,7 @@ export default function FeaturedProject() {
               {["Next.js", "TypeScript", "Tailwind CSS"].map((tech) => (
                 <span
                   key={tech}
-                  className="rounded-full border border-neutral-700 px-4 py-2 text-sm text-neutral-300"
+                  className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-100"
                 >
                   {tech}
                 </span>
@@ -46,7 +49,7 @@ export default function FeaturedProject() {
 
             <Link
               href="#contact"
-              className="mt-10 inline-flex rounded-full bg-white px-6 py-3 text-sm font-medium text-neutral-950 transition hover:bg-neutral-200"
+              className="mt-10 inline-flex rounded-full bg-gradient-to-r from-white via-[#eaf6ff] to-[#cfeaff] px-6 py-3 text-sm font-medium text-[#061827] transition hover:brightness-105"
             >
               Discuss a Similar Project
             </Link>

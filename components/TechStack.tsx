@@ -7,10 +7,10 @@ const technologies = {
 
 export default function TechStack() {
   return (
-    <section className="bg-neutral-950 px-6 py-24 text-white lg:px-8">
+    <section className="bg-gradient-to-br from-[#071827] via-[#0d2740] to-[#123d63] px-6 py-24 text-white lg:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="max-w-2xl">
-          <p className="text-sm font-medium uppercase tracking-[0.2em] text-neutral-500">
+          <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#abd5ff]">
             Technology
           </p>
 
@@ -21,14 +21,17 @@ export default function TechStack() {
 
         <div className="mt-16 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           {Object.entries(technologies).map(([category, items]) => (
-            <div key={category}>
-              <h3 className="text-sm font-medium uppercase tracking-wider text-neutral-500">
+            <div
+              key={category}
+              className="rounded-2xl border border-white/10 bg-white/5 p-5 shadow-[0_20px_40px_rgba(1,14,25,0.35)]"
+            >
+              <h3 className="text-sm font-medium uppercase tracking-wider text-[#a8d3ff]">
                 {category}
               </h3>
 
               <ul className="mt-5 space-y-3">
                 {items.map((item) => (
-                  <li key={item} className="text-lg text-neutral-200">
+                  <li key={item} className="text-lg text-slate-100">
                     {item}
                   </li>
                 ))}

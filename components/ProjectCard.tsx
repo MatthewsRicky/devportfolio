@@ -15,9 +15,9 @@ export default function ProjectCard({
   href = "#contact",
 }: ProjectCardProps) {
   return (
-    <article className="group">
+    <article className="group rounded-[1.75rem] border border-white/10 bg-gradient-to-b from-[#123d63] to-[#0a1d2e] p-4 shadow-[0_24px_50px_rgba(2,14,25,0.4)]">
       <Link href={href}>
-        <div className="overflow-hidden rounded-2xl bg-neutral-100">
+        <div className="overflow-hidden rounded-2xl border border-white/10 bg-[#0d2339]">
           <Image
             src={image}
             alt={title}
@@ -28,15 +28,15 @@ export default function ProjectCard({
         </div>
 
         <div className="mt-6">
-          <h3 className="text-2xl font-semibold tracking-tight text-neutral-950">
+          <h3 className="text-2xl font-semibold tracking-tight text-white">
             {title}
           </h3>
 
-          <p className="mt-3 max-w-lg leading-7 text-neutral-600">
+          <p className="mt-3 max-w-lg leading-7 text-slate-200">
             {description}
           </p>
 
-          <span className="mt-5 inline-block text-sm font-medium text-neutral-950">
+          <span className="mt-5 inline-block text-sm font-medium text-[#dff4ff]">
             View Project →
           </span>
         </div>

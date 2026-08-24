@@ -1,46 +1,62 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="flex min-h-screen items-center px-6 pt-24 lg:px-8">
-      <div className="mx-auto w-full max-w-7xl">
-        <div className="max-w-4xl">
-          <p className="mb-6 text-sm font-medium uppercase tracking-[0.2em] text-neutral-500">
-            Web Developer
-          </p>
+    <section className="relative overflow-hidden px-6 lg:px-8">
+      <div className="absolute inset-0 -z-20">
+        <Image
+          src="/Tech.jpg"
+          alt="Technology showcase"
+          fill
+          className="object-cover"
+          priority
+        />
+      </div>
 
-          <h1 className="text-5xl font-semibold leading-[1.05] tracking-tight text-neutral-950 sm:text-6xl lg:text-8xl">
-            Websites & applications for businesses.
-          </h1>
+      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-[rgba(4,24,39,0.75)] via-[rgba(10,33,58,0.7)] to-[rgba(18,61,98,0.6)]" />
 
-          <p className="mt-8 max-w-2xl text-lg leading-8 text-neutral-600 sm:text-xl">
-            I build professional websites and web applications for businesses
-            and professional services, combining thoughtful design with modern
-            web technology.
-          </p>
+      <div className="mx-auto max-w-7xl">
+        <div className="min-h-[75vh] flex items-center">
+          <div className="max-w-3xl">
+            <p className="mb-6 text-sm font-medium uppercase tracking-[0.2em] text-[#a9d6ff]">
+              Web Developer. App Developer. Tech Consultant.
+            </p>
 
-          <div className="mt-10 flex flex-wrap gap-4">
-            <Link
-              href="#work"
-              className="rounded-full bg-neutral-950 px-6 py-3 text-sm font-medium text-white transition hover:bg-neutral-800"
-            >
-              View My Work
-            </Link>
+            <h1 className="text-4xl font-semibold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl">
+              Websites and web applications for businesses and teams.
+            </h1>
 
-            <Link
-              href="#contact"
-              className="rounded-full border border-neutral-300 px-6 py-3 text-sm font-medium text-neutral-900 transition hover:border-neutral-950"
-            >
-              Contact Me
-            </Link>
-          </div>
+            <p className="mt-8 max-w-2xl text-lg leading-8 text-slate-200 sm:text-xl">
+              I build professional websites and web applications for businesses
+              and professional services, combining thoughtful design with modern
+              web technology.
+            </p>
 
-          <div className="mt-16 flex flex-wrap gap-x-6 gap-y-3 text-sm text-neutral-500">
-            <span>Next.js</span>
-            <span>React</span>
-            <span>TypeScript</span>
-            <span>Tailwind CSS</span>
-            <span>React Native</span>
+            <div className="mt-8 flex flex-wrap gap-4">
+              <Link
+                href="#work"
+                className="rounded-full bg-gradient-to-r from-white via-[#eef9ff] to-[#cae7ff] px-6 py-3 text-sm font-medium text-[#051a2d] transition hover:brightness-105"
+              >
+                View My Work
+              </Link>
+
+              <Link
+                href="#contact"
+                className="rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-medium text-white transition hover:border-white/30 hover:bg-white/10"
+              >
+                Contact Me
+              </Link>
+            </div>
+
+            <div className="mt-10 text-sm text-[#cfe7ff]">
+              <ul className="flex flex-wrap gap-4">
+                <li>Next.js</li>
+                <li>React</li>
+                <li>TypeScript</li>
+                <li>Tailwind CSS</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

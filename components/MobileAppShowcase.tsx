@@ -3,19 +3,19 @@ import Link from "next/link";
 
 export default function MobileAppShowcase() {
   return (
-    <section className="bg-neutral-100 px-6 py-24 lg:px-8">
+    <section className="bg-gradient-to-br from-[#0b1f34] via-[#123d63] to-[#071827] px-6 py-24 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           <div>
-            <p className="text-sm font-medium uppercase tracking-[0.2em] text-neutral-500">
+            <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#abd5ff]">
               Technical Depth
             </p>
 
-            <h2 className="mt-4 text-4xl font-semibold tracking-tight text-neutral-950 sm:text-5xl">
+            <h2 className="mt-4 text-4xl font-semibold tracking-tight text-white sm:text-5xl">
               Beyond websites.
             </h2>
 
-            <p className="mt-6 max-w-xl text-lg leading-8 text-neutral-600">
+            <p className="mt-6 max-w-xl text-lg leading-8 text-slate-200">
               I also build full-featured mobile applications. This React Native
               application demonstrates offline data handling, persistent
               storage, navigation, application state management and a structured
@@ -27,7 +27,7 @@ export default function MobileAppShowcase() {
                 (tech) => (
                   <span
                     key={tech}
-                    className="rounded-full border border-neutral-300 px-4 py-2 text-sm text-neutral-700"
+                    className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-100"
                   >
                     {tech}
                   </span>
@@ -37,15 +37,15 @@ export default function MobileAppShowcase() {
 
             <Link
               href="#contact"
-              className="mt-10 inline-flex rounded-full bg-neutral-950 px-6 py-3 text-sm font-medium text-white transition hover:bg-neutral-800"
+              className="mt-10 inline-flex rounded-full bg-gradient-to-r from-white via-[#ebf8ff] to-[#bae0ff] px-6 py-3 text-sm font-medium text-[#051a2d] transition hover:brightness-105"
             >
               Discuss an Application
             </Link>
           </div>
 
-          <div className="overflow-hidden rounded-3xl">
+          <div className="overflow-hidden rounded-3xl border border-white/10 shadow-[0_30px_70px_rgba(2,14,25,0.5)]">
             <Image
-              src="/projects/mobile-app.jpg"
+              src="/mainapp.jpg"
               alt="React Native mobile application"
               width={1000}
               height={1000}
