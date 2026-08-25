@@ -46,6 +46,14 @@ export default function FeaturedProject() {
                 </span>
               ))}
             </div>
+            <a
+              href="https://lawtemplate-mu.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-block text-blue-900 hover:text-blue-300 hover:bg-blue-900 bg-blue-200 px-4 py-3 rounded-2xl transition mr-2"
+            >
+              View Project
+            </a>
 
             <Link
               href="#contact"

@@ -6,19 +6,22 @@ const projects = [
     description:
       "A modern corporate website designed to communicate services, expertise and value proposition.",
     image: "/mainbiz.png",
+    link: "https://businesstemplate-three.vercel.app/",
   },
   {
     title: "Safari Tourism Website",
     description:
       "A visually driven tourism website designed to showcase destinations, experiences and travel services.",
     image: "/maintour.png",
+    link: "https://toursandsafaritemplate.vercel.app/",
   },
-  // {
-  //   title: "Technology Services Website",
-  //   description:
-  //     "A professional technology-services website focused on communicating technical expertise and generating enquiries.",
-  //   image: "/Screenshot%202026-08-24%20144313.png",
-  // },
+  {
+    title: "Technology Services Website",
+    description:
+      "A professional technology-services website focused on communicating technical expertise and generating enquiries.",
+    image: "/techportfolio.png",
+    link: "https://tecktemplate.vercel.app/",
+  },
 ];
 
 export default function ProjectGrid() {

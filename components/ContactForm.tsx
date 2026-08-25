@@ -1,6 +1,7 @@
 "use client";
 
 import { sendContactForm } from "@/app/actions/contact";
+import { getErrorMessage, isValidEmail, validateString } from "@/lib/utils";
 import { useState } from "react";
 
 export default function ContactForm() {
@@ -12,22 +13,39 @@ export default function ContactForm() {
   const [submitStatus, setSubmitStatus] = useState<
     "idle" | "success" | "error"
   >("idle");
+  const [submitError, setSubmitError] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitStatus("idle");
+    setSubmitError("");
+
+    if (
+      !validateString(fullName, 120) ||
+      !validateString(serviceArea, 120) ||
+      !validateString(message, 2000) ||
+      !isValidEmail(email)
+    ) {
+      setSubmitStatus("error");
+      setSubmitError(
+        "Please check that your name, email, and message are valid.",
+      );
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
       const result = await sendContactForm({
-        fullName,
-        email,
-        serviceArea: serviceArea,
-        message,
+        fullName: fullName.trim(),
+        email: email.trim(),
+        serviceArea: serviceArea.trim(),
+        message: message.trim(),
       });
 
       if (result.success) {
         setSubmitStatus("success");
+        setSubmitError("");
         setFullName("");
         setEmail("");
         setServiceArea("Landing Page Development");
@@ -35,10 +53,14 @@ export default function ContactForm() {
       } else {
         console.error("Send error:", result.error);
         setSubmitStatus("error");
+        setSubmitError(
+          getErrorMessage(result.error) || "Error submitting form.",
+        );
       }
     } catch (error) {
       console.error("Form submission error:", error);
       setSubmitStatus("error");
+      setSubmitError(getErrorMessage(error) || "Error submitting form.");
     } finally {
       setIsSubmitting(false);
     }
@@ -118,7 +140,7 @@ export default function ContactForm() {
       )}
       {submitStatus === "error" && (
         <p className="mt-4 text-sm text-red-600 dark:text-red-400">
-          Error submitting form. Please try again.
+          {submitError || "Error submitting form. Please try again."}
         </p>
       )}
     </form>
