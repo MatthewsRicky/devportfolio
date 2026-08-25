@@ -4,17 +4,7 @@ import Link from "next/link";
 export default function Hero() {
   return (
     <section className="relative overflow-hidden px-6 lg:px-8">
-      <div className="absolute inset-0 -z-20 overflow-hidden">
-        <Image
-          src="/Tech.jpg"
-          alt="Technology showcase"
-          fill
-          className="object-cover object-top sm:object-center"
-          priority
-        />
-      </div>
-
-      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-[rgba(4,24,39,0.75)] via-[rgba(10,33,58,0.7)] to-[rgba(18,61,98,0.6)]" />
+      <div className="absolute inset-0 -z-20 bg-gradient-to-br from-[rgba(4,24,39,1)] via-[rgba(10,33,58,1)] to-[rgba(18,61,98,1)]" />
 
       <div className="mx-auto max-w-7xl">
         <div className="min-h-[75vh] flex items-center">
