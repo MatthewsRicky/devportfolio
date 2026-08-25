@@ -4,12 +4,12 @@ import Link from "next/link";
 export default function Hero() {
   return (
     <section className="relative overflow-hidden px-6 lg:px-8">
-      <div className="absolute inset-0 -z-20">
+      <div className="absolute inset-0 -z-20 overflow-hidden">
         <Image
           src="/Tech.jpg"
           alt="Technology showcase"
           fill
-          className="object-cover"
+          className="object-cover object-top sm:object-center"
           priority
         />
       </div>
