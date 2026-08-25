@@ -6,7 +6,7 @@ export default function MobileAppShowcase() {
     <section className="bg-gradient-to-br from-[#0b1f34] via-[#123d63] to-[#071827] px-6 py-24 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-          <div>
+          <div className="h-Fit">
             <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#abd5ff]">
               Technical Depth
             </p>
@@ -49,7 +49,7 @@ export default function MobileAppShowcase() {
               alt="React Native mobile application"
               width={1000}
               height={1000}
-              className="w-full object-cover"
+              className="w-auto object-cover"
             />
           </div>
         </div>

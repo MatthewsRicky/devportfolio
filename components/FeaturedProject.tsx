@@ -1,7 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
+import ProjectQRCode from "./ProjectQRCode";
 
 export default function FeaturedProject() {
+  const projectUrl = "https://lawtemplate-mu.vercel.app/";
+
   return (
     <section
       id="work"
@@ -46,14 +49,21 @@ export default function FeaturedProject() {
                 </span>
               ))}
             </div>
-            <a
-              href="https://lawtemplate-mu.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-6 inline-block text-blue-900 hover:text-blue-300 hover:bg-blue-900 bg-blue-200 px-4 py-3 rounded-2xl transition mr-2"
-            >
-              View Project
-            </a>
+            <div className="mt-6 flex items-center gap-6">
+              <a
+                href={projectUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block text-blue-900 hover:text-blue-300 hover:bg-blue-900 bg-blue-200 px-4 py-3 rounded-2xl transition mr-2"
+              >
+                View Project
+              </a>
+
+              <div className="flex flex-col items-center text-sm text-slate-200">
+                <ProjectQRCode url={projectUrl} size={144} />
+                <span className="mt-2">Scan to open</span>
+              </div>
+            </div>
 
             <Link
               href="#contact"
