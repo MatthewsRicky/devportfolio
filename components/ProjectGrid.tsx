@@ -19,7 +19,7 @@ const projects = [
     title: "Technology Services Website",
     description:
       "A professional technology-services website focused on communicating technical expertise and generating enquiries.",
-    image: "/techportfolio.png",
+    image: "/Techland.png",
     link: "https://tecktemplate.vercel.app/",
   },
 ];
