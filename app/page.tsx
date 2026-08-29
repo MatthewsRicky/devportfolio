@@ -1,5 +1,5 @@
 import Hero from "@/components/Hero";
-import FeaturedProject from "@/components/FeaturedProject";
+import FeaturedClientProject from "@/components/FeaturedClientProject";
 import ProjectGrid from "@/components/ProjectGrid";
 import MobileAppShowcase from "@/components/MobileAppShowcase";
 import Services from "@/components/Services";
@@ -11,8 +11,13 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <FeaturedProject />
+
+      {/* Real-world client work gets top priority */}
+      <FeaturedClientProject />
+
+      {/* Concepts and templates */}
       <ProjectGrid />
+
       <MobileAppShowcase />
       <Services />
       <TechStack />

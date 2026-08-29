@@ -1,29 +1,29 @@
 import Image from "next/image";
+
 interface ProjectCardProps {
   title: string;
   description: string;
   image: string;
-  link?: string;
+  link: string;
+  type: string;
 }
 
 export default function ProjectCard({
   title,
   description,
   image,
-  link = "#contact",
+  link,
+  type,
 }: ProjectCardProps) {
-  const isExternal = link?.startsWith("http");
-
   return (
-    <article className="group rounded-[1.75rem] border border-white/10 bg-gradient-to-b from-[#123d63] to-[#0a1d2e] p-4 shadow-[0_24px_50px_rgba(2,14,25,0.4)]">
+    <article className="group shadow-sm shadow-blue-400/30 hover:scale-105 transition">
       <a
         href={link}
-        {...(isExternal
-          ? { target: "_blank", rel: "noopener noreferrer" }
-          : {})}
+        target="_blank"
+        rel="noopener noreferrer"
         className="block"
       >
-        <div className="overflow-hidden rounded-2xl border border-white/10 bg-[#0d2339]">
+        <div className="overflow-hidden rounded-2xl bg-slate-800">
           <Image
             src={image}
             alt={title}
@@ -33,17 +33,21 @@ export default function ProjectCard({
           />
         </div>
 
-        <div className="mt-6">
-          <h3 className="text-2xl font-semibold tracking-tight text-white">
+        <div className="mt-6 p-3">
+          <span className="inline-flex rounded-full border border-[#abd5ff]/30 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-[#abd5ff]">
+            {type}
+          </span>
+
+          <h3 className="mt-4 text-2xl font-semibold tracking-tight text-white">
             {title}
           </h3>
 
-          <p className="mt-3 max-w-lg leading-7 text-slate-200">
+          <p className="mt-3 max-w-lg leading-7 text-slate-300">
             {description}
           </p>
 
-          <span className="mt-5 inline-block text-sm font-medium text-[#dff4ff]">
-            View Project →
+          <span className="mt-5 inline-block text-sm font-medium text-[#abd5ff]">
+            View Project ↗
           </span>
         </div>
       </a>
