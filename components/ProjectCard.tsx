@@ -16,7 +16,7 @@ export default function ProjectCard({
   type,
 }: ProjectCardProps) {
   return (
-    <article className="group shadow-sm shadow-blue-400/30 hover:scale-105 transition">
+    <article className="group shadow-sm shadow-blue-400/30 hover:scale-105 transition rounded-lg">
       <a
         href={link}
         target="_blank"

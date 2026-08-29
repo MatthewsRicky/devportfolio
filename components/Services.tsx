@@ -43,7 +43,7 @@ export default function Services() {
           {services.map((service) => (
             <div
               key={service.number}
-              className="border-b border-white/10 bg-gradient-to-br from-white/4 to-transparent py-8 md:px-8 md:first:pl-0 md:nth-[3]:pl-0"
+              className="border-b border-white/10 bg-gradient-to-br from-white/4 to-transparent px-2 sm:px-3 py-8 md:px-8"
             >
               <span className="text-sm text-[#a9d6ff]">{service.number}</span>
 
