@@ -44,7 +44,7 @@ export default function FeaturedClientProject() {
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr] lg:items-center">
           <div className="overflow-hidden rounded-3xl border border-white/10 bg-neutral-900">
             <Image
-              src="/Screenshotfunzi.png"
+              src="/funzi.png"
               alt="Funzi Beach Restaurant website"
               width={1600}
               height={1000}
