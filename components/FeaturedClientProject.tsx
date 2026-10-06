@@ -31,21 +31,19 @@ export default function FeaturedClientProject() {
           </div>
 
           <h2 className="mt-6 text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
-            Funzi Beach Restaurant
+            L.A Ogotti & Associates Advocates Website
           </h2>
 
           <p className="mt-6 max-w-2xl text-lg leading-8 text-neutral-300">
-            A real-world hospitality and tourism website designed for a
-            restaurant and island-experience business on Kenya&apos;s south
-            coast.
+            A real-world professional website for a law firm.
           </p>
         </div>
 
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr] lg:items-center">
           <div className="overflow-hidden rounded-3xl border border-white/10 bg-neutral-900">
             <Image
-              src="/funzi.png"
-              alt="Funzi Beach Restaurant website"
+              src="/Ogotti.png"
+              alt="L.A Ogotti & Associates Advocates Website"
               width={1600}
               height={1000}
               priority
@@ -55,9 +53,13 @@ export default function FeaturedClientProject() {
 
           <div>
             <p className="text-base leading-8 text-neutral-200">
-              The website brings together the restaurant, Funzi Island
-              experiences, excursions, seafood, private bookings and customer
-              enquiries into one professional digital experience.
+              The website was designed and built to provide a professional
+              online presence for the law firm. It features a clean and modern
+              design, easy navigation, and responsive layout for optimal viewing
+              on all devices. The website includes information about the firm's
+              services, team members, and contact details, allowing potential
+              clients to easily get in touch includinf a functionality for
+              submitting inquiries.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-2">
@@ -73,7 +75,7 @@ export default function FeaturedClientProject() {
 
             <div className="mt-10 flex flex-wrap gap-4">
               <Link
-                href="https://funzibeachrestaurant-32v2.vercel.app/"
+                href="https://ogottilaw.co.ke/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex rounded-full bg-white px-6 py-3 text-sm font-semibold text-neutral-950 transition hover:bg-neutral-200"
